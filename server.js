@@ -10,16 +10,8 @@ app.configure(function () {
 
 
 
-//app.get('/wines/:id', wines.findById);
-
-
+app.get('/wines2'   , wines.findById)
 app.get('/wines', wines.findAll);
-//app.get('/wines', function(req, res) {
-//    res.send([{name:'wine1'}, {name:'wine2'}]);
-//});
-//app.get('/wines/:id', function(req, res) {
-  //  res.send({id:req.params.id, name: "The Name", description: "description"});
-//});
 
 app.listen(3000);
 console.log('Express Listening on port 3000...');

@@ -50,6 +50,30 @@ exports.findAll = function(req, res) {
 }
 
 
+//아이템 선택
+exports.findById= function(req, res) {
+    var id = req.query.id;
+    console.log("paramid===" + id);
+
+    var cursor = db.collection('gorealra').find({"name":id});
+
+    cursor.toArray(function (err, items) {
+
+
+        //json_object1.totalCount = count;
+        //json_object1.list = items;
+        //var finalJsonData = JSON.stringify(json_object1);
+        var finalJsonData = JSON.stringify(items);
+        console.log("log===" + finalJsonData);
+
+
+
+    });
+
+
+}
+
+
 
 
 
