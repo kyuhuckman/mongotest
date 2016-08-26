@@ -41,7 +41,17 @@ exports.findAll = function(req, res) {
             json_object1.totalCount = count;
             json_object1.list = items;
             var finalJsonData = JSON.stringify(json_object1);
-            console.log("log===" + finalJsonData);
+
+            res.send(finalJsonData);
+//            console.log("log===" + finalJsonData);
+
+
+
+
+
+
+
+
 
 
 
